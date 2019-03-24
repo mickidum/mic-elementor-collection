@@ -295,13 +295,12 @@ class Widget_Timeline extends Widget_Base {
 							if ($item['tab_image']['url']) {
 								$this->add_render_attribute( $repeater_setting_key, 'class', 'biography-table__row--image' );
 								$image_class = 'biography-table__row--image';
-								$image_i = '<img src="'.$item['tab_image']['url'].'" alt="thumbnail">';
-								$image_html = Group_Control_Image_Size::get_attachment_image_html($item, 'thumbnail', 'tab_image');	
+								$image_i = Group_Control_Image_Size::get_attachment_image_html($item, 'thumbnail', 'tab_image');	
 							}
 						?>
 							<tr <?php echo $this->get_render_attribute_string( $repeater_setting_key ); ?> 
 							 >
-							 <td class="biography-table__key"><?php echo $item['tab_title'].' '.$image_html; ?></td>
+							 <td class="biography-table__key"><?php echo $item['tab_title'].' '.$image_i; ?></td>
 							 <td class="biography-table__info"><?php echo $item['tab_content']; ?></td>
 							</tr>
 						<?php endforeach; ?>
