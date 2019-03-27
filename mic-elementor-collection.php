@@ -43,6 +43,13 @@ function mic_elementor_collection_load() {
 add_action( 'plugins_loaded', 'mic_elementor_collection_load' );
 
 
+function mic_elementor_collection_fail_load() {
+	?>
+	<div class="notice notice-error">
+		<p>Mic Elementor Collection Plugin works only with Elementor, please enable that shit</p>
+	</div>
+	<?php
+}
 
 
 function mic_elementor_collection_fail_load_out_of_date() {
